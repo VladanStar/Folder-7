@@ -10,6 +10,7 @@ public class JavaMT17 {
         
         System.out.println("Koliko telefona zelite da unesete: ");
         int broj = input.nextInt();
+        input.nextLine();
        
         if(broj <1){
             System.out.println("Niste uneli ispravan broj!!!");
@@ -75,7 +76,7 @@ public class JavaMT17 {
     
     public static void sortiraj(MobilniTelefon[]niz){
         for(int j = 0; j <niz.length -1; j++){
-            for(int i = 0; i< niz.length; i++){
+            for(int i = 0; i< niz.length -1; i++){
                 if(niz[i].ocenaPodobnosti()< niz[i+1].ocenaPodobnosti()){
                     MobilniTelefon.zameniMesto(niz[i], niz[i+1]);
                 }
